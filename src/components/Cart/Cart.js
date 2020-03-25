@@ -6,7 +6,9 @@ import { ProductConsumer } from "../../context";
 import CartList from "./CartList";
 import CartTotals from "./CartTotals";
 
-function Cart() {
+function Cart(props) {
+  console.log(props);
+
   return (
     <section>
       {
@@ -19,7 +21,7 @@ function Cart() {
                   <Title name="your" title="cart"></Title>
                   <CartColumns></CartColumns>
                   <CartList value={value}></CartList>
-                  <CartTotals value={value}></CartTotals>
+                  <CartTotals value={value} history={props.history}></CartTotals>
                 </>
               );
             } else {

@@ -2,8 +2,6 @@ import React from "react";
 
 function CartItem({ item, value }) {
   const { id, title, img, price, total, count } = item;
-  console.log(count);
-
   const { increment, decrement, removeItem } = value;
   return (
     <div className="row my-2 text-capitalize text-center">

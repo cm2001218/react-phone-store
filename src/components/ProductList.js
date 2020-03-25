@@ -1,9 +1,7 @@
-import React from "react"
-import Product from "./Product"
-import Title from "./Title"
-import { ProductConsumer } from "../context"
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import React from "react";
+import Product from "./Product";
+import Title from "./Title";
+import { ProductConsumer } from "../context";
 
 function ProductList() {
   /* const state = {
@@ -18,8 +16,8 @@ function ProductList() {
             <ProductConsumer>
               {value => {
                 return value.products.map(product => {
-                  return <Product key={product.id} product={product}></Product>
-                })
+                  return <Product key={product.id} product={product}></Product>;
+                });
               }}
             </ProductConsumer>
           </div>
@@ -28,7 +26,7 @@ function ProductList() {
 
       {/* <Product></Product> */}
     </>
-  )
+  );
 }
 
-export default ProductList
+export default ProductList;
