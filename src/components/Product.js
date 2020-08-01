@@ -14,7 +14,7 @@ export class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
-            {value => (
+            {(value) => (
               <div className="img-container p-5" onClick={() => value.handleDetail(id)}>
                 <Link to="/details">
                   <img src={img} alt="product" className="card-img-top" />
@@ -59,8 +59,8 @@ Product.propTypes = {
     img: PropTypes.string,
     title: PropTypes.string,
     price: PropTypes.number,
-    inCart: PropTypes.bool
-  }).isRequired
+    inCart: PropTypes.bool,
+  }).isRequired,
 };
 
 const ProductWrapper = styled.div`
@@ -106,7 +106,6 @@ const ProductWrapper = styled.div`
     color: var(--mainWhite);
     font-size: 1.4rem;
     border-radius: 0.5 0 0 0;
-    transform: translate(100%, 100%);
     transition: all 0.5s linear;
   }
   .img-container:hover .cart-btn {
